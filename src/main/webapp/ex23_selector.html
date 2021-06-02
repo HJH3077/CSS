@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>selector3</title>
+<style type="text/css">
+	p:first-child {color: red;}
+	p:last-child { color: purple;}
+	p:nth-child(even) {background-color: skyblue;}
+	p:nth-child(odd) {background-color: lightgray;}
+	p:nth-last-child(even) {font-size: 24px;}
+	p:nth-last-child(odd) {font-size: 24px;}
+</style>
+</head>
+<body>
+	<!-- 
+		형제가 여러개 있을 때
+		first-child : 형제관계 중 첫번째 위치에 있는 태그
+		last-child : 형제관계 중 마지막 위치에 있는 태그
+		nth-child(수열) : 형제관계 중 앞에서 수열 번째의 태그 선택
+		nth-last-child(수열) : 형제관계 중 뒤에서 수열 번째의 태그 선택
+		** 수열 대신 even은 짝수, odd는 홀수를 의미하게 쓸 수도 있음 => 홀수번째, 짝수번째
+		   2n+1 같은 수열은 1,3,5,7.. 등
+	 -->
+	 <p>This is some text.</p>
+	 <p>This is some text.</p>
+	 <p>This is some text.</p>
+	 <p>This is some text.</p>
+	 <p>This is some text.</p>
+	 <p>This is some text.</p>
+	 
+</body>
+</html>

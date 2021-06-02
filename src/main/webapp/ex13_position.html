@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>위치속성</title>
+<style type="text/css">
+	div.box{
+		width: 100px; height: 100px;
+		/* position: static; 
+		   static은 이동이 불가 */
+		
+		/* 이렇게 한 세트 왼쪽에서 오른쪽으로 30px 이동 */
+		/*
+		 position: relative;
+		left: 30px;
+		*/
+		}	
+	div.red{ background-color: red;}
+	div.green{ background-color: green;}
+	div.blue{ background-color: blue;}
+	
+	.red{
+		position: absolute;
+		left: 10px;
+		top: 50px;
+	}
+	.green{
+		position: absolute;
+		left: 150px;
+		top: 50px;
+	}
+	.blue{
+		position: absolute;
+		left: 300px;
+		top: 50px;
+	}
+	
+</style>
+</head>
+<body>
+	<!-- 
+		position 속성
+		 - static   : 위에서 아래로 순서대로 배치 (default)
+		 - relative : 초기 위치 상태에서 상하좌우(left, right)로 위치를 이동
+		 - absolute : 절대 위치 좌표 설정, 상하좌우의 위치값을 지정
+		 - fixed    : 화면을 기준으로 절대 위치 좌표 설정
+		 - z-index  : 겹쳐있는 순서를 변경할 때 사용(숫자가 높을수록 위로 올라감)
+	 -->
+	 <!-- 클래스 중첩 가능 : box클래스를 가지면서 각각 red green blue 클래스를 가지고있음 -->
+	 <div class="box red"></div>
+	 <div class="box green"></div>
+	 <div class="box blue"></div>
+</body>
+</html>

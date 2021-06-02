@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dropdown : 마우스 가져다 대면 숨겨둔 글이 보이게함 (주석 같은거)</title>
+<style type="text/css">
+	.d
+
+	.content{
+		display: none; /* 첨에는 안보여야 하므로 */
+	}
+	.dropdown:hover .content{
+		display: block;
+	}
+</style>
+</head>
+<body>
+	<h2> hoverable Dropdown </h2>
+	<p> 여기는 본문 내용입니다. </p>
+	<div class="dropdown">
+		<span> 마우스를 올려주세요 </span>
+		<div class="content">
+			<p> Hello HTML&CSS </p>
+		</div>
+	</div>
+</body>
+</html>

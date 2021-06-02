@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>수직 메뉴(고정)</title>
+<style type="text/css">
+	* {margin: 0; padding: 0;}
+	ul {
+		width: 25%; /* %이므로 창의 길이에 따라 늘어나고 줄어듬이 같이 됨 */
+		list-style-type: none;
+		background-color: #f1f1f1;
+		position: fixed; /* fix로 수직바가 고정되어 있음 */
+		height: 100%;
+		overflow: auto;
+	}
+	li a{
+		display: block;
+		color: black;
+		padding: 8px 16px;
+		text-decoration: none;
+	}
+	li a.active{
+		background-color: #04aa6d;
+		color: white;
+	}
+	li a:hover{
+		color: white;
+		background-color: #555;
+	}
+	div.content{
+		padding: 1px 16px;
+		background-color: lightgray;
+		margin-left: 25%; /* 메뉴바가 25% 이므로 25%만큼 떨어져야 안 겹쳐짐 */
+		height: 800px;
+	}
+	div.footer{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 75%;
+		background-color: yellow;
+	}
+</style>
+</head>
+<body>
+	<ul>
+		<li><a class="active">Home</a></li>
+		<li><a>News</a></li>
+		<li><a>Contact</a></li>
+		<li><a>About</a></li>
+	</ul>
+	<div class="content">
+		<h2 id="b1">눌러주세요</h2>
+		<h2>수직 메뉴 연습</h2>
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>	
+	</div>
+	
+	<div class="footer">
+		<h2>footer</h2>
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+	</div>
+</body>
+</html>

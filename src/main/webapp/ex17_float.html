@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>clearfix</title>
+<style type="text/css">
+	div{border: 1px solid red;}
+	#img1{ float: left;}
+	#h2{ clear: left;} /* 이걸 안하면 h2가 딸려올라감 */
+	hr{clear: both;}
+
+	
+	/* clearfix */
+	#d2{overflow: auto;}
+	#img2{ float: left; 
+		   margin-right: 30px; /* 그림이랑 글자랑 띄우기 */}	
+</style>
+</head>
+<body>
+	<!-- 부모 태그에 자식 태그를 고정시킨다. -->
+	<h2>clearfix를 안한 경우</h2>
+	<div>
+		<img id="img1" alt="" src="images/img_girl.jpg" style="width: 150px;">
+		<p>이것은 float 연습입니다.이것은 float 연습입니다. 이것은 float 연습입니다.이것은 float
+			연습입니다.이것은 float 연습입니다. 이것은 float 연습입니다.이것은 float 연습입니다.이것은 float
+			연습입니다. 이것은 float 연습입니다.이것은 float 연습입니다.이것은 float 연습입니다.</p>
+	</div>
+	<hr>
+	
+	<h2 id="h2">clearfix를 한 경우</h2>
+	<div id="d2">
+		<img id="img2" alt="" src="images/img_girl.jpg" style="width: 150px;">
+		<p>이것은 float 연습입니다.이것은 float 연습입니다. 이것은 float 연습입니다.이것은 float
+			연습입니다.이것은 float 연습입니다. 이것은 float 연습입니다.이것은 float 연습입니다.이것은 float
+			연습입니다. 이것은 float 연습입니다.이것은 float 연습입니다.이것은 float 연습입니다.</p>
+	</div>
+</body>
+</html>

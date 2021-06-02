@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	* {box-sizing: border-box;}
+	input[type=text], select {
+		width: 100%;
+		padding: 12px;
+		border: 1px solid #ccc;
+		border-radius: 4px; /* 테두리를 둥글게 만듬 */
+		resize: vertical;
+	}
+	label {
+		display: inline-block;
+		padding: 12px 12px 12px 0;
+	}
+	input[type=submit] {
+		background-color: skyblue;
+		color: white;
+		padding: 12px 20px; /* 사각형에 padding을 주면 뚱뚱해짐 */
+		border: none;
+		border-radius: 4px;
+		float: right;
+	}
+	.container {
+		border-radius: 5px;
+		background-color: lightgray;
+		padding: 20px;
+	}
+	.col_1{
+		float: left;
+		width: 20%;
+		margin-top: 6px;
+	}
+	.col_2{
+		float: left;
+		width: 80%;
+		margin-top: 6px;
+	}
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+	input[type=radio]:checked + label, input[type=checkbox]:checked + label {
+		font-size: 1.5em;
+	}
+	input:focus{ /* 커서가 들어가면 색이 바뀜 */
+		background-color: yellow; 
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+	<form action="">
+		<div class="row">
+			<div class="col_1">
+				<!-- label태그는 input태그를 도와주는 역할로 p태그와 비슷하지만 
+					 for를 이용하여 input의 id를 연계하는 등의 사용이 가능하다. -->
+				<label for="fname">First Name</label>
+				<!-- label의 for 속성은 input type의 id와 연계 : 같은 값을 가져야함
+					 => label을 클릭하면 자동으로 input에 커서가 생성된다.  -->
+			</div>
+			<div class="col_2">
+				<input type="text" id="fname" name="fistname"
+					placeholder="이름을 입력하세요...">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col_1">
+				<label for="lname">Last Name</label>
+			</div>
+			<div class="col_2">
+				<input type="text" id="lname" name="Lastname"
+					placeholder="성씨를 입력하세요...">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col_1">
+				<label>Gender</label>
+			</div>
+			<div class="col_2">
+				<input type="radio" name="gender" value="남"><label>남자</label>
+				<input type="radio" name="gender" value="여"><label>여자</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col_1">
+				<label>Hobby</label>
+			</div>
+			<div class="col_2">
+				<input type="checkbox" name="hobby" value="운동"><label>운동</label>
+				<input type="checkbox" name="hobby" value="게임"><label>게임</label>
+				<input type="checkbox" name="hobby" value="독서"><label>독서</label>
+				<input type="checkbox" name="hobby" value="영화"><label>영화</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col_1">
+				<label for="county">country</label>
+			</div>
+			<div class="col_2">
+				<select type="text" id="county" name="Lastname">
+					<option>Australia</option>
+					<option>Canada</option>
+					<option>USA</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<input type="submit" value="Submit">
+		</div>
+	</form>
+	</div>
+</body>
+</html>

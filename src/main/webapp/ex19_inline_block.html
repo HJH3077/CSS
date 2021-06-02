@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Inline Block</title>
+<style type="text/css">
+	span.a{ /* 너비와 높이를 줬는데도 평범한 인라인 태그라 의미가 없음 */
+		width: 100px;
+		height: 100px;
+		padding: 5px;
+		border: 1px solid red;
+		background-color: yellow;
+	}
+	span.b{
+		display: inline-block; /* block처럼 한 줄을 차지하지는 않는네 인라인 같지만 높이와 너비를 가진 블록형태임 */
+		width: 100px;
+		height: 100px;
+		padding: 5px;
+		border: 1px solid red;
+		background-color: yellow;
+	}
+	span.c{ /* 블록으로 자신이 한 줄을 모두 차지하는데 block 형태로 차지함 */
+		display: block;
+		width: 100px;
+		height: 100px;
+		padding: 5px;
+		border: 1px solid red;
+		background-color: yellow;
+	}
+</style>
+</head>
+<body>
+	<h2>display 속성 3가지</h2>
+	<h3>display : inline</h3>
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+		consequat scelerisque elit sit amet consequat. Aliquam erat volutpat.
+		<span class="a">Aliquam</span> <span class="a">venenatis</span>
+		gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed
+		laoreet.
+	</div>
+	<h3>display : inline-block</h3>
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+		consequat scelerisque elit sit amet consequat. Aliquam erat volutpat.
+		<span class="b">Aliquam</span> <span class="b">venenatis</span>
+		gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed
+		laoreet.
+	</div>
+	<h3>display : block</h3>
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+		consequat scelerisque elit sit amet consequat. Aliquam erat volutpat.
+		<span class="c">Aliquam</span> <span class="c">venenatis</span>
+		gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed
+		laoreet.
+	</div>
+</body>
+</html>
